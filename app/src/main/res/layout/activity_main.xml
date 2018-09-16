@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:id="@+id/radioGroup"
+        android:layout_marginTop="16dp">
+
+
+        <RadioButton
+            android:text="Walking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton2" />
+
+
+        <RadioButton
+            android:text="Running"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:layout_weight="0.24" />
+
+
+        <RadioButton
+            android:text="Jumping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton3" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/black"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Start Recording"
+        android:textColor="#ffffff" />
+
+
+    <Button
+        android:id="@+id/btn_svm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/black"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Predict Accuracy"
+        android:textColor="#ffffff" />
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/btn_svm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <Button
+            android:id="@+id/button_viz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:text="Visualization"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/power_tutor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:text="Predict"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_below="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:visibility="invisible"
+        android:id="@+id/imageView" />
+
+</RelativeLayout>
